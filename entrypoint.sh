@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sed -i "s/^allowed_hosts=127.0.0.1$/allowed_hosts=127.0.0.1, ${NAGIOS_SERVER}/g" /etc/nagios/nrpe.cfg
+#sed -i "s/^allowed_hosts=127.0.0.1$/allowed_hosts=127.0.0.1, ${NAGIOS_SERVER}/g" /etc/nagios/nrpe.cfg
 
 /usr/sbin/nrpe -c /etc/nagios/nrpe.cfg -d
 
