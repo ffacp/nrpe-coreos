@@ -2,6 +2,8 @@
 
 #sed -i "s/^allowed_hosts=127.0.0.1$/allowed_hosts=127.0.0.1, ${NAGIOS_SERVER}/g" /etc/nagios/nrpe.cfg
 
+rm /var/log/nrpe.log
+
 /usr/sbin/nrpe -c /etc/nagios/nrpe.cfg -d
 
 # Wait for NRPE Daemon to exit
